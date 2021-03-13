@@ -1,0 +1,40 @@
+{
+    "name": "kaphein-ts-type-utils",
+    "version": "0.1.0",
+    "description": "A set of type utilities for typescript.",
+    "main": "dist/index.ts",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "author": "Hydrawisk793 <hyw793@gmail.com>",
+    "license": "MIT",
+    "scripts": {
+        "lint": "eslint src/**/*.ts",
+        "lint:fix": "npm run lint -- --fix",
+        "build": "rm -rf dist && npm run lint && tsc -p tsconfig.json",
+        "prepack": "npm install && npm run build"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Hydrawisk793/kaphein-ts-type-utils.git"
+    },
+    "keywords": [
+        "typescript",
+        "type",
+        "generic"
+    ],
+    "bugs": {
+        "url": "https://github.com/Hydrawisk793/kaphein-ts-type-utils/issues"
+    },
+    "homepage": "https://github.com/Hydrawisk793/kaphein-ts-type-utils#readme",
+    "bundledDependencies": [],
+    "dependencies": {},
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^4.17.0",
+        "@typescript-eslint/parser": "^4.17.0",
+        "eslint": "^7.22.0",
+        "husky": "^2.7.0",
+        "typescript": "^4.2.3"
+    }
+}
