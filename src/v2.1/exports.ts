@@ -1,6 +1,6 @@
 export * from "../v1.0/exports";
 
-export type Assign<L, R> = Omit<L, keyof R> & R;
+export type Assign<L, R> = (keyof R extends never ? L : (Omit<L, keyof R> & R));
 
 export type ExtractExtends<S, T> = { [K in keyof S] : (S[K] extends T ? K : never) }[keyof S];
 
